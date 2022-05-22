@@ -6,8 +6,154 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Formulários de outro planeta</title>
     </head>
+    <style>
+        #form2 {
+            font-size: 24px;
+            color: deeppink;
+        }
+    </style>
     <body>
         <p><a href="../">Voltar para Home</a></p>
-        <form action=""></form>
+        <p><a href="./form.html">Veja um bom formulário</a></p>
+        <form action="" id="form2">
+            <fieldset>
+                <legend>Contato</legend>
+                <label for="fnome">Nome</label>
+                <!-- o FOR do LABEL está ligado ao ID do INPUT -->
+                <input type="text" id="fnome" name="fnome" placeholder="Nome" autofocus />
+                <input type="submit" value="Responder" />
+                <button type="reset" name="button" disabled>Limpar Campos</button>
+            </fieldset>
+            <input type="text" list="frutas" placeholder="Escolha um Fruta" />
+            <datalist id="frutas">
+                <option>Manga</option>
+                <option>Laranja</option>
+                <option>Uva</option>
+            </datalist>
+            <input type="color" list="colors" value="" />
+            <datalist id="colors">
+                <option>#ff0000</option>
+                <option>#00ff00</option>
+                <option>#0000ff</option>
+            </datalist>
+            <input type="date" name="" id="" />
+            <input type="text" value="input somente de leitura" readonly />
+            <input type="number" name="" id="" min="3" step="3" placeholder="somente number" />
+            <input type="email" name="" id="" placeholder="digite seu e-mail" required pattern="+@" title="Coloque o @" />
+            <input
+                type="password"
+                name=""
+                id=""
+                placeholder="digite sua senha"
+                required
+                pattern="[0-9]{4,8}"
+                title="Coloque apenas números, mínimo 4 e máximo 8"
+                inputmode="numeric"
+                autocomplete="off"
+            />
+            <!--
+                pattern para senha: são expressões regulares para validar o que está sendo
+                digitado no campo, caso senha
+                Exemplo: queremos que a senha contenha caracteres hexadecimais com o limite de no
+                mínimo 4 e no máximo 8 caracteres - pattern="[0-9a-fA-F]{4,8}"
+            -->
+            <input type="text" name="" id="" autocomplete="email" placeholder="autocomplete e-mail" />
+            <datalist id="url-list">
+                <option>http://marceloicampos.com.br</option>
+                <option>https://marceloicampos.com.br</option>
+            </datalist>
+            <label for="furl">URL</label>
+            <input type="url" name="" id="furl" pattern=".*\.com\.br.*" title="Somente domínios com.br" list="url-list" spellcheck="false" />
+            <input type="hidden" name="id" id="" value="8" />
+            <fieldset>
+                <legend>Vamos Tomar um Café</legend>
+                <label for="sradio">Sim</label>
+                <input type="radio" name="cafe" id="sradio" value="yes" checked />
+                <label for="nradio">Não</label>
+                <input type="radio" name="cafe" id="nradio" value="no" />
+            </fieldset>
+        </form>
+        <hr />
+        <form action="" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Qual Premio</legend>
+                <label for="sim">Copo</label>
+                <input type="checkbox" name="check1" id="sim" value="sim" />
+                <label for="nao">Mouse</label>
+                <input type="checkbox" name="check1" id="nao" value="nao" />
+            </fieldset>
+            <br />
+            <br />
+            <input type="file" name="" id="" accept=".pdf, image/*" multiple />
+            <br />
+            <br />
+            <button type="submit">Enviar Arquivo</button>
+        </form>
+        <hr />
+        <p>O Fieldset abaixo está fora do formulário, mas ainda faz parte do formulário</p>
+        <fieldset form="form2">
+            <legend>Fieldset Fora do Form</legend>
+            <label for="fsobrenome">Sobrenome</label>
+            <input type="text" id="fsobrenome" name="fsobrenome" placeholder="Sobrenome" form="form2" />
+        </fieldset>
+        <hr />
+        <label>
+            Nome
+            <input type="text" />
+        </label>
+        <label for="sobrenomes">Sobrenome</label>
+        <input type="text" id="sobrenomes" />
+        <hr />
+        <form action="">
+            <label for="ftext">Mensagem</label>
+            <br />
+            <textarea name="mensagem" id="ftext" cols="30" rows="5" placeholder="Escreva Seu Texto" wrap="off"></textarea>
+        </form>
+        <hr />
+        <form action="">
+            <label for="op1">Opções de Marca</label>
+            <br />
+            <select name="marca" id="op1">
+                <option>Selecione a Marca</option>
+                <option value="Ford">Ford</option>
+                <option value="Fiat">Fiat</option>
+            </select>
+            <input type="submit" value="Enviar Opção" />
+        </form>
+        <hr />
+        <form action="">
+            <label for="fani">Escolha seu Animal</label>
+            <br />
+            <select name="pets" id="fani" multiple size="6">
+                <optgroup label="SOFT ANIMALS">
+                    <option value="cat">Cat</option>
+                    <option value="dog">Dog</option>
+                </optgroup>
+                <optgroup label="HARD ANIMALS">
+                    <option value="tiger">Tiger</option>
+                    <option value="lion">Lion</option>
+                </optgroup>
+            </select>
+        </form>
+        <hr />
+        <form action="">
+            <input type="search" name="query" id="fpesquisa" placeholder="Digite sua busca" size="30" aria-label="Pesquise Aqui: Digite sua busca" />
+            <input type="submit" value="Pesquisar" />
+        </form>
+        <hr />
+        <form action="">
+            <input type="range" name="" id="" step="5" min="-100" max="100" />
+        </form>
+        <hr />
+        <form action="">
+            <input type="date" name="date" id="" value="yyyy-mm-aa" />
+            <br />
+            <br />
+            <input type="datetime-local" name="" id="" />
+        </form>
+        <script>
+            var nome_element = window.location.href
+            console.log(nome_element)
+        </script>
     </body>
 </html>
