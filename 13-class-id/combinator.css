@@ -1,0 +1,26 @@
+body article h2 {
+    color: red;
+}
+
+body > ul > li {
+    color: orange;
+}
+
+body > ul > ul > li {
+    color: lime;
+}
+h1 + p {
+    color: purple;
+}
+
+button + button {
+    margin-left: 128px;
+}
+
+h2 ~ p {
+    color: brown;
+}
+
+ul > li[class='pink'] {
+    color: pink;
+}
