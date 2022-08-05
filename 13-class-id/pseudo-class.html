@@ -7,12 +7,75 @@
         <title>Pseudo Class</title>
         <style>
             h1 {
+                color: orange;
+            }
+            ul li:first-child {
+                font-weight: bold;
                 color: red;
             }
+            article p:nth-of-type(1) {
+                color: blue;
+            }
+            div p:nth-child(odd) {
+                color: green;
+                font-weight: bolder;
+                background-color: #eee;
+            }
+            div p:nth-child(even) {
+                color: gray;
+            }
+            a:hover {
+                color: red;
+            }
+            input:focus {
+                color: red;
+                border-color: blue;
+                outline: none;
+            }
+            input:disabled {
+                background-color: brown;
+                border-color: blue;
+                outline: none;
+            }
+            input:required {
+                background-color: pink;
+                border-color: blue;
+                outline: none;
+            }
         </style>
+        <!-- disabled para desabilitar o input -->
+        <!-- required para obrigar preenchimento -->
     </head>
     <body>
         <p><a href="./">Voltar</a></p>
         <h1>Pseudo Class</h1>
+        <p>É um tipo de seletor que irá selecionar um elemento que estiver num determinado estado e então aplicar uma determinada propriedade</p>
+        <ul>
+            <li>Gratidão - first-child</li>
+            <li>Esperança</li>
+            <li>Fé</li>
+        </ul>
+        <hr />
+        <article>
+            <h3>Frases</h3>
+            <p>Gratidão - nth-of-type</p>
+            <p>Esperança</p>
+            <p>Fé</p>
+        </article>
+        <hr />
+        <div>
+            <h3>OLÁ</h3>
+            <p>oieeeeeee1 - even - impar</p>
+            <p>oieeeeeee2 - odd - par</p>
+            <p>oieeeeeee3 - even - impar</p>
+            <p>oieeeeeee4 - odd - par</p>
+            <p>oieeeeeee5 - even - impar</p>
+        </div>
+        <hr />
+        <a href="#">LINK</a>
+        <hr />
+        <input type="text" name="nome" id="nome" placeholder="seu nome" />
+        <!-- disabled para desabilitar o input -->
+        <!-- required para obrigar preenchimento -->
     </body>
 </html>

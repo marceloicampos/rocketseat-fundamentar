@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pseudo Elements</title>
+        <style>
+            h1 {
+                color: orange;
+            }
+            li::before {
+                content: '> ';
+            }
+            li::after {
+                content: ';';
+            }
+            p:nth-of-type(2)::first-line {
+                font-weight: bold;
+            }
+        </style>
+        <!-- o content é OBRIGATÓRIO -->
+    </head>
+    <body>
+        <p><a href="./">Voltar</a></p>
+        <h1>Pseudo Class</h1>
+        <p>
+            Podemos adicionar elementos HTML pelo CSS !!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum alias modi, accusantium id eius
+            omnis officia expedita repellat? Eaque deleniti labore, sunt voluptas autem harum. Provident optio sunt repellendus numquam.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores vitae laudantium, et, ratione animi, architecto iste eveniet nostrum delectus
+            labore magni minima fugiat consequuntur quibusdam ipsam unde tenetur alias ex!
+        </p>
+        <ul>
+            <li>Gratidão</li>
+            <li>Esperança</li>
+            <li>Fé</li>
+            <li>Liberdade</li>
+        </ul>
+    </body>
+</html>
