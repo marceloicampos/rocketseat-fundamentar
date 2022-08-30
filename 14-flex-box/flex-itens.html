@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flex Box</title>
+        <style>
+            h1 {
+                color: orange;
+            }
+
+            .box {
+                display: flex;
+                border: 1px dashed red;
+            }
+
+            .box div {
+                border: 1px solid;
+                /* width: 25px; */
+                /* flex-basis: 50px; */
+                flex-basis: auto;
+            }
+
+            .box div:nth-child(1) {
+                color: red;
+                width: 100px;
+            }
+
+            .box2 {
+                display: flex;
+                flex-direction: column;
+                border: 1px dashed red;
+                height: 150px;
+            }
+
+            .box2 div {
+                border: 1px solid;
+            }
+
+            .box2 div:nth-child(1) {
+                color: blue;
+                flex-grow: 2;
+            }
+
+            .box2 div:nth-child(2),
+            .box2 div:nth-child(3) {
+                color: blue;
+                flex-grow: 1;
+            }
+
+            .box3 {
+                display: flex;
+                border: 1px dashed red;
+                width: 160px;
+            }
+
+            .box3 div {
+                /* flex-basis: 40px; */
+                border: 1px solid;
+                width: 160px;
+            }
+
+            .box3 div:nth-child(2) {
+                color: blue;
+                flex-shrink: 0;
+            }
+
+            .box4 {
+                display: flex;
+                border: 1px dashed red;
+            }
+
+            .box4 div {
+                border: 1px solid;
+                flex: 1 1 0;
+                /* grow, shrink, basis */
+            }
+            .page {
+                border: 2px solid;
+                min-height: 50vh;
+
+                display: flex;
+            }
+            .page aside {
+                background-color: lightgreen;
+                flex: 1;
+            }
+            .page main {
+                background-color: lightblue;
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+            }
+            .page section:nth-child(1) {
+                background-color: lightgoldenrodyellow;
+                flex: 2 0;
+                order: 2;
+            }
+            .page section:nth-child(2) {
+                background-color: lightsalmon;
+                flex: 0 120px;
+                order: 1;
+            }
+            .page section:nth-child(3) {
+                background-color: lightpink;
+                flex: 1 0;
+                order: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <p><a href="./">Voltar</a></p>
+        <h1>Flex Itens</h1>
+        <div class="box">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+            <div>D</div>
+        </div>
+        <hr />
+        <div class="box2">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+            <div>D</div>
+        </div>
+        <hr />
+        <div class="box3">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+            <div>D</div>
+        </div>
+        <hr />
+        <div class="box4">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+            <div>D</div>
+        </div>
+        <hr />
+        <div class="page">
+            <aside>Aside</aside>
+            <main>
+                Main
+                <section>Content1</section>
+                <section>Content2</section>
+                <section>Content3</section>
+            </main>
+        </div>
+    </body>
+</html>

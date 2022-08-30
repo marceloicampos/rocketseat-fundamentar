@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flex Box</title>
+        <style>
+            h1 {
+                color: orange;
+            }
+
+            .container {
+                display: flex;
+                /* flex-direction: column; */
+                /* justify-content: flex-end; */
+                /* height: 100vh; */
+                border: 1px solid red;
+                height: 50vh;
+            }
+
+            .item {
+                background-color: gray;
+                border: 1px solid;
+                flex: 1;
+            }
+
+            .container2 {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .box {
+                display: flex;
+                border: 1px dashed red;
+                flex-wrap: wrap;
+            }
+            .box div {
+                border: 1px solid;
+                width: 800px;
+            }
+            .box2 {
+                display: flex;
+                flex-flow: wrap column;
+                border: 1px dashed red;
+            }
+
+            .box2 div {
+                border: 1px solid;
+                height: 50px;
+                width: 80px;
+            }
+            .box3 {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                border: 1px dashed red;
+                height: 150px;
+            }
+
+            .box3 div {
+                border: 1px solid;
+            }
+            .box4 {
+                display: flex;
+                gap: 32px;
+                align-items: center;
+                border: 1px dashed red;
+                height: 150px;
+            }
+
+            .box4 div {
+                border: 1px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <p><a href="../">Voltar</a></p>
+        <p><a href="./flex-itens.html">Flex Itens</a></p>
+        <a href="./desafios-flex.html">Desafios Flex Box</a>
+        <h1>Flex Box</h1>
+        <div class="container">
+            <div>normal flow&nbsp;</div>
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div>&nbsp;flex-direction</div>
+        </div>
+        <div class="container2">
+            <div class="item2">A</div>
+            <div class="item2">B</div>
+            <div class="item2">C</div>
+        </div>
+        <div class="box">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+            <div>D</div>
+        </div>
+        <hr />
+        <div class="box2">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+            <div>D</div>
+        </div>
+        <hr />
+        <div class="box3">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+            <div>D</div>
+        </div>
+        <hr />
+        <div class="box4">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+            <div>D</div>
+        </div>
+    </body>
+</html>
