@@ -1,0 +1,1 @@
+console.log('Script Rodou em start - o start não precisa de npm run')

@@ -1,0 +1,1 @@
+console.log('Script Rodou em dev - o dev e outros scripts precisam de npm run')
