@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <%- include('../partials/head'); %>
+    <body class="container">
+        <%- include('../partials/header'); %>
+        <main>
+            <div class="jumbotron">
+                <h1>Node com EJS + Express</h1>
+                <p>Aprendendo a Trabalhar com EJS</p>
+                <p>npm install ejs</p>
+                <p>npm install express</p>
+                <a href="/sobre">Sobre mim</a>
+            </div>
+            <ul>
+                <% qualitys.forEach(item => { %>
+                <li><strong><%= item.title %></strong><%= item.message %></li>
+                <% }); %>
+                <li><strong>EJS:</strong> <%= sub %></li>
+            </ul>
+        </main>
+        <%- include('../partials/footer'); %>
+    </body>
+</html>
